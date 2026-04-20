@@ -1,5 +1,5 @@
 
-2 tests (see PDF) Welch's two-sample t-test
+2 tests (Hyp_tests_used.txt) Welch's two-sample t-test
 Why? Section 1 and Section 2 showed the group variances differ: 
 Males std = 16.5 
 Females  = 18.7
