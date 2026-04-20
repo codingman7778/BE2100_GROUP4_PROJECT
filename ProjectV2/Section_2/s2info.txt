@@ -1,0 +1,16 @@
+
+| Group           | n    | mean   | 95% CI           |
+|-----------------|------|--------|------------------|
+| All adults      | 6039 | 122.34 | [121.88, 122.79] |
+| Male            | 2736 | 124.74 | [124.12, 125.36] |
+| Female          | 3303 | 120.34 | [119.70, 120.98] |
+| Young 15–30     | 958  | 111.71 | [110.99, 112.43] |
+| Old 30–80       | 5081 | 124.34 | [123.84, 124.84] |
+
+
+
+
+Verifies hypothesis tests. 
+Old-group SE is larger than Young SE in std is larger ---> more variance in BP as people age, but both intervals are narrow due to large n.
+The sampling-distribution plot shows how concentrated the mean estimate is.. 
+WHAT DOES THIS DEMONSTRATE?? CENTRAL LIMIT THEOREM!

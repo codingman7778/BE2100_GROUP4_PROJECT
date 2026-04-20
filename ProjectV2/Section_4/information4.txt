@@ -1,0 +1,37 @@
+Section 4 — Regressions
+
+Model - Simple linear regression, chosen over MLS, because BMI is negligible in its effect. 
+
+VIF ANALYSIS WHAT IS IT AND WHAT DOES IT MEAN: Variance Inflation Factor (VIF) analysis measures how much the variance of an estimated regression coefficient is inflated due to multicollinearity (correlation) among independent variables. It helps identify, by quantifying, how strongly one predictor is predicted by others, with VIF > 4 warranting investigation and VIF > 10 indicating severe multicollinearity. 
+It is used To detect and correct for multicollinearity in linear regression. A VIF of 1 means no correlation, 1–5 implies moderate correlation, and > 5–10 indicates high multicollinearity.
+
+BMXWT and BMXHT have high VIF, so including them alongside BMXBMI causes multicollinearity inflation.
+After dropping BMXWT and BMXHT (keeping RIDAGEYR + BMXBMI), all predictor VIFs are ~1.00-- GREAT!! 
+
+
+Why this model: Section 1 identified RIDAGEYR (|r|=0.402) most impactful continuous predictors of BPXSY. Weight and height are collinear with BMI(confirmed by VIF).
+Confidence interval showed massive separation between young/old group means — age has the dominant effect on BP. A simple linear model on age (Model 1) is therefore the natural baseline.
+Hyppothesis tests confirmed both gender and age groups differ significantly in mean BP. The age effect is far stronger (|t|=28.3 vs |t|=9.7 for gender), again supporting age as the primary regression predictor.
+
+BPXSY is modeled as a linear function of predictors. Residual-vs-fitted plots show mild non-linearity. Observations are independent. 
+
+| Model                    | R^2    | adj R^2 | AIC       | F         | F p-value  |
+|--------------------------|--------|---------|-----------|-----------|------------|
+| M1: BPXSY ~ Age          | 0.1614 | 0.1613  | 50900.4   | 1161.97   | 4.42e-233  |
+| M2: BPXSY ~ Age + BMI    | 0.1620 | 0.1617  | 50898.2   | 583.38    | 2.33e-232  |
+
+Model 1(simple L): Intercept = 101.66, age coefficient = +0.395 mmHg per year at (p < 1e-200). Every 10 years of the age+4 mmHg.
+
+Model 2: Age coif stays virtually identical +0.394 mmHg per year, with the BMI coefficient +0.060 mmHg per BMI unit... Adding BMI raises R² by only ~0.0006 — essentially NO RELEVANCE
+
+BOTH models confirm what we found in Sections 1–3
+Age is a strong determinant of BPXSY
+BMI is negligible, consistent with its very small |r| of 0.042.
+Residual patterns (heavier upper tail) are consistent with the right-skewed BPXSY distribution from section 1. 
+
+Transformations- log/sqrt/reciprocal transforms of BPXSY and BMI — none produced a dramatically stronger linear relationship, we should not focus on it. 
+
+Additional ideas???
+Interaction of age × gender to test whether the gender BP gap changes with age.
+Quantile regression
+Logistic regression on BPXSY ≥ 130

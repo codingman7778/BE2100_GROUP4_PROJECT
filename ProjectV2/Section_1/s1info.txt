@@ -1,0 +1,35 @@
+Descriptive Statistics: Information
+NHANES filtered to age(RIDAGEYR >= 18), n = 6039.
+
+Central tendency & spread:
+BPXSY (mean systolic BP from 3 BPXOSY col): mean ~122.3, median 120.0, std ~17.9. Slight right skew (~0.92). SMALL UPPER TAIL of hypertensive subjects.
+RIDAGEYR: mean ~52, median 56, slight left skew.
+BMXBMI: mean ~29.6 (overweight), right-skewed (~1.09) with a HEAVY OBESE TAIL. 
+BMXWT: weight is right-skewed (irrelevant)
+
+Histogram box plots confirm results: visible high-side outliers consistent with subgroup. 
+Frequency summary: BPXSY concentrates in the 110–130 bin.
+
+Coorelations: 
+
+Variable    Pea|r| w/ BPXSY 
+ 
+RIDAGEYR   | 0.402         |
+BMXBMI     | 0.042         |
+BMXWT      | 0.031         |
+BMXHT      | 0.021         |
+
+AGE IS BY FAR the largest correlation value of BP. 
+BMI is a distant second. 
+Weight and height barely move BPXSY linearly. 
+MOST IMPACTFUL ==== RIDAGEYR(age) and BMXBMI(BMI) + RIAGENDR(Gender)
+
+Group means
+Male mean BPXSY ~124.7, Female ~120.3 — males higher on average.
+Young 15–30 mean ~111.7, Old 30–80 mean ~124.3 — a roughly 12-mmHg gap that is very large relative to a ~17.9 std.
+
+Age is a dominant driver — any hypothesis test or regression must condition on or include age.
+Gender difference in BPXSY is visible in the descriptive stats and merits a formal test (Section 3 Test 1).
+Young vs old separation is enormous — Section 3 Test 2 is almost certainly going to reject H0 (confirmed below).
+Because distributions are right-skewed, CIs and t-tests rely on CLT/large-n rather than normality; n is large enough for that to be safe (Section 2, 3).
+6BMI and weight/height collinearity is evident and verified by VIF analysis. 

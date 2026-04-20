@@ -1,0 +1,42 @@
+
+2 tests (see PDF) Welch's two-sample t-test
+Why? Section 1 and Section 2 showed the group variances differ: 
+Males std = 16.5 
+Females  = 18.7
+Young std = 11.3 
+Old = 18.2. 
+Welch does not assume equal variance. I also compute pooled variance t for comparison, results are consistent.
+
+αlpha = 0.05
+
+Ht1 — Male vs Female BPXSY
+
+H0: μ_male = μ_female
+H1: μ_male ≠ μ_female
+
+n_male = 2736, mean 124.74, std 16.52
+n_female = 3303, mean 120.34, std 18.69
+mean diff = +4.40 mmHg
+Welch t = 9.71 and (p = 4.15e-22)
+Pooled t = 9.59, (p = 1.21e-21)
+
+REJECT HO 
+There is overwhelming evidence that mean systolic BP DIFFERS between males and females in this sample population (males higher by 4.4 mmHg).
+
+Ht2 Young (15–30) vs Old (30–80) BPXSY
+
+H0: μ_young = μ_old
+H1: μ_young ≠ μ_old
+
+n_young = 958, mean 111.71, std 11.32
+n_old = 5081, mean 124.34, std 18.17
+mean diff = −12.63 mmHg
+Welch t = −28.33, p = 5.31e-149
+ooled t = −20.77, p = 1.36e-92
+
+Reject H0. Extremely strong evidence that OLD subjects have HIGHER mean systolic BP than young subjects.
+
+
+In both tests we reject the null. This aligns with the Section 2 confidence interval result (non-overlap) and with the descriptive difference in group means (Section 1).
+The age effect is than the gender effect (|t|=28.3 vs |t|=9.7), consistent with section 1 
+Practical significance: 4.4 mmHg gender gap statistically significant!
