@@ -1,0 +1,6 @@
+Test 1: 
+H0 = There is no difference in the average blood pressures between male and female. 
+H1 = There is a statistically significant difference in average blood pressures between male and female.
+Test 2: 
+H0 = There is no difference in the average blood pressures between young(age 15-30) and old (30-max age) age groups. 
+H1 = There is a statistically significant difference in the average blood pressures between young(age 15-30) and old (30-max age) age groups.
