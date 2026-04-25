@@ -1,0 +1,26 @@
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                  BPXSY   R-squared:                       0.162
+Model:                            OLS   Adj. R-squared:                  0.162
+Method:                 Least Squares   F-statistic:                     583.4
+Date:                Mon, 20 Apr 2026   Prob (F-statistic):          2.33e-232
+Time:                        00:12:38   Log-Likelihood:                -25446.
+No. Observations:                6039   AIC:                         5.090e+04
+Df Residuals:                    6036   BIC:                         5.092e+04
+Df Model:                           2                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+const         99.9382      1.058     94.494      0.000      97.865     102.012
+RIDAGEYR       0.3941      0.012     33.976      0.000       0.371       0.417
+BMXBMI         0.0600      0.029      2.046      0.041       0.003       0.117
+==============================================================================
+Omnibus:                      691.716   Durbin-Watson:                   2.007
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):             1382.646
+Skew:                           0.730   Prob(JB):                    5.78e-301
+Kurtosis:                       4.834   Cond. No.                         313.
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
